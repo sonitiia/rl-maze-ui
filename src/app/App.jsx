@@ -1,9 +1,7 @@
-import Canvas from "../components/Canvas";
+import Game from "../components/Game";
 
 const App = () => {
-  return (
-      <Canvas />
-  );
+  return <Game />;
 };
 
 export default App;
