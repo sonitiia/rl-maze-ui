@@ -1,17 +1,16 @@
-export const hasPath = (maze) => {
+export const hasPath = (maze, start, goal) => {
+  if (!start || !goal) return false;
+
   const visited = new Array(maze.length)
     .fill(false)
     .map(() => new Array(maze[0].length).fill(false));
   const queue = [];
-  const endRow = maze.length - 2;
-  const endCol = maze[0].length - 3;
-
-  queue.push([1, 1]);
-  visited[1][1] = true;
+  queue.push([start.y, start.x]);
+  visited[start.y][start.x] = true;
 
   while (queue.length) {
     const [row, col] = queue.shift();
-    if (row === endRow && col === endCol) {
+    if (row === goal.y && col === goal.x) {
       return true;
     }
 

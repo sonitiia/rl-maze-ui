@@ -1,7 +1,7 @@
-import Game from "../components/Game";
+import QLearningVisualization from "../components/QLearningVisualization";
 
 const App = () => {
-  return <Game />;
+  return <QLearningVisualization />;
 };
 
 export default App;
